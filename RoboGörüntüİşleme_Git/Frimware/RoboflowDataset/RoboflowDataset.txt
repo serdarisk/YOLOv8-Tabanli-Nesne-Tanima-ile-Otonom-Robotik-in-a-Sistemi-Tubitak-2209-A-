@@ -1,0 +1,7 @@
+!pip install roboflow
+from roboflow import Roboflow
+#roboflow özel kimliği bu kimlik roboflow tarafından üretilir ve projeye özeldir #lbWoZGbv2X6TuPoBUQ8I
+rf = Roboflow(api_key="lbWoZGbv2X6TuPoBUQ8I") 
+project = rf.workspace("serdar-rh2tw").project("fakli_yapilar_tanima")
+version = project.version(2)
+dataset = version.download("yolov8") 
